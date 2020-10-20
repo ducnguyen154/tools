@@ -11,7 +11,6 @@ async function start() {
   const nuxt = new Nuxt(config)
 
   const { host, port } = nuxt.options.server
-  console.log(process.env.NODE_ENV, port)
   // Build only in dev mode
   if (config.dev) {
     const builder = new Builder(nuxt)
@@ -29,7 +28,7 @@ async function start() {
 
   consola.ready({
     message: `Server listening on http://${host}:${port}`,
-    badge: true
+    badge: true,
   })
 
   server.on('clientError', (err, socket) => {
@@ -38,7 +37,6 @@ async function start() {
       return
     }
     socket.end('HTTP/1.1 400 Bad Request\r\n\r\n')
-  }) 
+  })
 }
 start()
-

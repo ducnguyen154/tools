@@ -1,0 +1,29 @@
+<template>
+  <div>
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-brand href="#">DucNg</b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item href="/random" :active="isActive('/random')"
+            >Random</b-nav-item
+          >
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    isActive() {
+      // eslint-disable-next-line no-console
+      console.log(this.$route.path)
+      return true
+    },
+  },
+}
+</script>

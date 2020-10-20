@@ -1,7 +1,10 @@
+// export default {
+// eslint-disable-next-line nuxt/no-cjs-in-config
 module.exports = {
+  telemetry: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'nuxtjsMemo',
+    title: 'tools.ducng',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,6 +30,8 @@ module.exports = {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    // https://go.nuxtjs.dev/bootstrap
+    'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
@@ -36,8 +41,7 @@ module.exports = {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
-  server: {
-    port: process.env.PORT || 3001,
-    host: '0.0.0.0',
-  }
+  render: {
+    csp: true,
+  },
 }

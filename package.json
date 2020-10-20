@@ -1,9 +1,9 @@
 {
-  "name": "nuxtjsMemo",
+  "name": "tools.ducng",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "env-cmd nodemon server/index.js --wath server",
+    "dev": "env-cmd nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "node --max-http-header-size=10240 server/index.js",
     "generate": "nuxt generate",
@@ -11,16 +11,22 @@
     "lint": "npm run lint:js",
     "test": "jest"
   },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
-    "axios": "^0.20.0",
-    "axios-extensions": "^3.1.3",
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.17.3",
+    "consola": "^2.15.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
-    "express-useragent": "^1.0.15",
     "helmet": "^4.1.1",
-    "moment": "^2.29.1",
-    "moment-timezone": "^0.5.31",
     "nocache": "^2.1.0",
     "nuxt": "^2.14.6"
   },
@@ -36,14 +42,11 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "jest": "^26.5.0",
-    "node-sass": "^4.14.1",
-    "nodemon": "^2.0.5",
+    "lint-staged": "^10.4.0",
+    "nodemon": "^2.0.6",
     "prettier": "^2.1.2",
-    "sass-loader": "^10.0.3",
-    "sass-resources-loader": "^2.1.1",
-    "vue-jest": "^3.0.4",
-    "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.12"
+    "vue-jest": "^3.0.4"
   }
 }

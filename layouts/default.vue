@@ -1,8 +1,18 @@
 <template>
   <div>
+    <nav-bar></nav-bar>
     <Nuxt />
   </div>
 </template>
+
+<script>
+import NavBar from '@/components/atoms/NavBar'
+export default {
+  components: {
+    NavBar,
+  },
+}
+</script>
 
 <style>
 html {

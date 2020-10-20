@@ -8,7 +8,7 @@ app.use(nocache())
 
 app.use(express.json())
 
-//app.use(require('./middleware'))
+// app.use(require('./middleware'))
 app.use(require('./route'))
 
 app.use((err, req, res, next) => {
@@ -17,11 +17,10 @@ app.use((err, req, res, next) => {
   const response = {
     status: {
       code,
-      message
-    }
+      message,
+    },
   }
   res.status(code)
   res.json(response)
 })
 module.exports = app
-
