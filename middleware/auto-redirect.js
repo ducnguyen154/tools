@@ -1,5 +1,5 @@
 export default function ({ req, redirect }) {
-  if (req.url === '/') {
+  if (req.path === '/') {
     return redirect('/random')
   }
 }
