@@ -19,10 +19,8 @@
 <script>
 export default {
   methods: {
-    isActive() {
-      // eslint-disable-next-line no-console
-      console.log(this.$route.path)
-      return true
+    isActive(path) {
+      return this.$route.path === path
     },
   },
 }
