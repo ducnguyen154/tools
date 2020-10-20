@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# PM2
+ecosystem.config.js
