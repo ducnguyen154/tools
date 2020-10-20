@@ -1,5 +1,8 @@
-export default function ({ req, redirect }) {
-  if (req.path === '/') {
-    return redirect('/random')
+export default function (context) {
+  if (process.server) {
+    const { req, redirect } = context
+    if (req.url === '/') {
+      return redirect('/random')
+    }
   }
 }
