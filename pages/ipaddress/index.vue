@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <global-ip-address-template
-      ip-address="ipAddress"
+      :ip-address="ipAddress"
     ></global-ip-address-template>
   </div>
 </template>
