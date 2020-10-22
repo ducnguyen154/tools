@@ -8,16 +8,20 @@
 
 <script>
 import GlobalIpAddressTemplate from '@/components/templates/GlobalIpAddressTemplate'
-import publicIp from 'public-ip'
+import RequestIp from 'request-ip'
+import { mapGetters } from 'vuex'
 export default {
   components: {
     GlobalIpAddressTemplate,
   },
-  async asyncData() {
-    const ipAddress = await publicIp.v4()
-    return {
-      ipAddress,
-    }
+  asyncData(context) {
+    const requestIp = RequestIp.getClientIp(context.req)
+    context.store.commit('ipAddress/setIpAddress', requestIp)
+  },
+  computed: {
+    ...mapGetters({
+      ipAddress: 'ipAddress/getIpAddress',
+    }),
   },
 }
 </script>
