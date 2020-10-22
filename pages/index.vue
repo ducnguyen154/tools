@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <!--cmty-->
-    <random-template></random-template>
+    <string-template></string-template>
   </div>
 </template>
 
 <script>
-import RandomTemplate from '@/components/templates/RandomTemplate'
+import StringTemplate from '@/components/templates/StringTemplate'
 export default {
   components: {
-    RandomTemplate,
+    StringTemplate,
   },
 }
 </script>
