@@ -8,15 +8,14 @@
 
 <script>
 import GlobalIpAddressTemplate from '@/components/templates/GlobalIpAddressTemplate'
-import RequestIp from 'request-ip'
 import { mapGetters } from 'vuex'
 export default {
   components: {
     GlobalIpAddressTemplate,
   },
   asyncData(context) {
-    const requestIp = RequestIp.getClientIp(context.req)
-    context.store.commit('ipAddress/setIpAddress', requestIp)
+    console.log(context.req.headers['x-forwarded-for'])
+    context.store.commit('ipAddress/setIpAddress', context.req.headers['x-forwarded-for'])
   },
   computed: {
     ...mapGetters({
