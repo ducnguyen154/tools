@@ -14,8 +14,10 @@ export default {
     GlobalIpAddressTemplate,
   },
   asyncData(context) {
-    console.log(context.req.headers['x-forwarded-for'])
-    context.store.commit('ipAddress/setIpAddress', context.req.headers['x-forwarded-for'])
+    // eslint-disable-next-line
+    console.log(context.req.headers)
+    const publicIp = context.req.headers['x-forwarded-for']
+    context.store.commit('ipAddress/setIpAddress', publicIp)
   },
   computed: {
     ...mapGetters({

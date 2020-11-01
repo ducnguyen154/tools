@@ -46,7 +46,9 @@ module.exports = {
       hashArgorism: 'sha256',
       policies: {
         'script-src': [
-          "'sha256-4RS22DYeB7U14dra4KcQYxmwt5HkOInieXK1NUMBmQI='", // this line resolves the violation
+          "'self'",
+          "'unsafe-inline'",
+          "'sha256-atVm7DLnsMNrjN8U3c4F3eXLzOeDonZSDpL4x8Q8wpA='", // this line resolves the violation
         ],
       },
     },
