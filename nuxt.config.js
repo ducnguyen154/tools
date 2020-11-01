@@ -17,7 +17,7 @@ module.exports = {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/string.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: false,
@@ -31,7 +31,12 @@ module.exports = {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    [
+      'bootstrap-vue/nuxt',
+      {
+        icons: true,
+      },
+    ],
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],

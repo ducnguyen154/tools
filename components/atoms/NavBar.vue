@@ -8,11 +8,11 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item href="/string" :active="isActive('/string')"
-            >String</b-nav-item
+            >Random String</b-nav-item
           >
-          <b-nav-item href="/ipaddress" :active="isActive('/ipaddress')"
+          <!-- <b-nav-item href="/ipaddress" :active="isActive('/ipaddress')"
             >IPAddress</b-nav-item
-          >
+          > -->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

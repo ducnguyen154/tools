@@ -54,53 +54,38 @@
 </template>
 
 <script>
+import randomStringConfig from '@/configs/random-string'
 export default {
   data() {
     return {
       randomString: '',
       numOfResult: 6,
-      numOfResultMax: 32,
       stringLength: 8,
-      stringLengthMax: 64,
       allowedCharacterSelected: ['uppercase', 'lowercase', 'number'],
       charactersType: [
         { text: 'Numeric digit (0-9)', value: 'number' },
         { text: 'Uppercase letters (A-Z)', value: 'uppercase' },
         { text: 'Lowercase Letters (a-z)', value: 'lowercase' },
+        { text: 'Punctation Letters (!@#$...)', value: 'punctation' },
       ],
-      characters: {
-        uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-        lowercase: 'abcdefghijklmnopqrstuvwxyz',
-        number: '0123456789',
-      },
     }
+  },
+  computed: {
+    numOfResultMax() {
+      return randomStringConfig.maxResult
+    },
+    stringLengthMax() {
+      return randomStringConfig.maxStringLength
+    },
   },
   methods: {
     generateRandomString() {
-      const characters = this.allowedCharacterSelected
-        .map((type) => {
-          return this.characters[type]
-        })
-        .join('')
-      this.randomString = Array.apply(
-        null,
-        Array(Math.max(1, Math.min(this.numOfResultMax, this.numOfResult)))
+      const random = this.$randomStringGenerate(
+        this.numOfResult,
+        this.stringLength,
+        this.allowedCharacterSelected
       )
-        .map(() => {
-          return Array.apply(
-            null,
-            Array(
-              Math.max(1, Math.min(this.stringLengthMax, this.stringLength))
-            )
-          )
-            .map(() => {
-              return characters.charAt(
-                Math.floor(Math.random() * characters.length)
-              )
-            })
-            .join('')
-        })
-        .join('<br />')
+      this.randomString = random.join('<br />')
     },
   },
 }
