@@ -10,9 +10,9 @@
           <b-nav-item href="/string" :active="isActive('/string')"
             >Random String</b-nav-item
           >
-          <!-- <b-nav-item href="/ipaddress" :active="isActive('/ipaddress')"
-            >IPAddress</b-nav-item
-          > -->
+          <b-nav-item href="/plantuml" :active="isActive('/plantuml')"
+            >PlantUML</b-nav-item
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
