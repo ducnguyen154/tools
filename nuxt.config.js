@@ -20,7 +20,7 @@ module.exports = {
   plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -42,6 +42,15 @@ module.exports = {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
   render: {
-    csp: true,
+    csp: {
+      hashArgorism: 'sha256',
+      policies: {
+        'script-src': [
+          "'self'",
+          "'unsafe-inline'",
+          "'sha256-atVm7DLnsMNrjN8U3c4F3eXLzOeDonZSDpL4x8Q8wpA='", // this line resolves the violation
+        ],
+      },
+    },
   },
 }

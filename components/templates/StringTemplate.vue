@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import RandomString from '@/components/organisms/Random/RandomString'
+import RandomString from '@/components/organisms/String/RandomString'
 export default {
   components: {
     RandomString,
