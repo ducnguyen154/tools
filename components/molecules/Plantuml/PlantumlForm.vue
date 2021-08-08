@@ -24,7 +24,9 @@ export default {
   },
   methods: {
     onSubmit() {
-      // const gen = plantuml.generate({ format: 'svg'})
+      // const gen = plantuml.generate('A -> B: Hello', { format: 'svg' })
+      // eslint-disable-next-line no-console
+      // console.log(gen)
     },
   },
 }

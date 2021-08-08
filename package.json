@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.13.1",
     "apache-crypt": "^1.2.4",
     "apache-md5": "^1.1.5",
     "bcryptjs": "^2.4.3",
@@ -34,6 +34,7 @@
     "helmet": "^4.1.1",
     "nocache": "^2.1.0",
     "node-plantuml": "^0.9.0",
+    "node-plantuml-latest": "^2.1.0",
     "nuxt": "^2.14.6",
     "sass": "^1.28.0",
     "sass-loader": "^10.0.4",
