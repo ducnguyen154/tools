@@ -66,13 +66,13 @@ export default {
       charactersType: [
         { text: 'Numeric digit (0-9)', value: 'number' },
         { text: 'Uppercase letters (A-Z)', value: 'uppercase' },
-        { text: 'Lowercase Letters (a-z)', value: 'lowercase' },
+        { text: 'Lowercase Letters (a-z)', value: 'lowercase' }
       ],
       characters: {
         uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         lowercase: 'abcdefghijklmnopqrstuvwxyz',
-        number: '0123456789',
-      },
+        number: '0123456789'
+      }
     }
   },
   methods: {
@@ -101,7 +101,7 @@ export default {
             .join('')
         })
         .join('<br />')
-    },
-  },
+    }
+  }
 }
 </script>

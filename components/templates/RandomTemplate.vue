@@ -12,7 +12,7 @@
 import RandomString from '@/components/organisms/Random/RandomString'
 export default {
   components: {
-    RandomString,
-  },
+    RandomString
+  }
 }
 </script>

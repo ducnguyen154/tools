@@ -3,7 +3,11 @@ const helmet = require('helmet')
 const nocache = require('nocache')
 const app = express()
 
-app.use(helmet())
+app.use(
+  helmet({
+    contentSecurityPolicy: false
+  })
+)
 app.use(nocache())
 
 app.use(express.json())
@@ -17,8 +21,8 @@ app.use((err, req, res, next) => {
   const response = {
     status: {
       code,
-      message,
-    },
+      message
+    }
   }
   res.status(code)
   res.json(response)

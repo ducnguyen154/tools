@@ -9,8 +9,8 @@
 import NavBar from '@/components/atoms/NavBar'
 export default {
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 }
 </script>
 
