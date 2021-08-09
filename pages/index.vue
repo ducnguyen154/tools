@@ -9,7 +9,7 @@
 import RandomTemplate from '@/components/templates/RandomTemplate'
 export default {
   components: {
-    RandomTemplate,
-  },
+    RandomTemplate
+  }
 }
 </script>

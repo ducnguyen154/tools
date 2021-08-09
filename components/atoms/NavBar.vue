@@ -10,6 +10,9 @@
           <b-nav-item href="/random" :active="isActive('/random')"
             >Random</b-nav-item
           >
+          <b-nav-item href="/tinhluong" :active="isActive('/tinhluong')"
+            >Tính lương</b-nav-item
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -21,7 +24,7 @@ export default {
   methods: {
     isActive(path) {
       return this.$route.path === path
-    },
-  },
+    }
+  }
 }
 </script>
