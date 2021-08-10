@@ -12,6 +12,10 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
+  loading: {
+    color: '#fff'
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
 
@@ -46,5 +50,40 @@ module.exports = {
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
+  build: {
+    extend(config, ctx) {
+      // Run eslint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    },
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        ['@babel/plugin-proposal-private-methods', { loose: true }],
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+      ]
+    }
+    // plugins: [new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /vi/)],
+  },
+
+  server: {
+    port: process.env.PORT || 3000,
+    host: '0.0.0.0'
+  },
+
+  router: {
+    // middleware: [],
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'error',
+        path: '*'
+      })
+    }
+  }
 }
