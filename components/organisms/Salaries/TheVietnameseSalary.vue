@@ -146,7 +146,7 @@
         <b-col class="mb-4">
           <b-form-group
             label="Vùng"
-            label-cols-sm="3"
+            label-cols-sm="2"
             label-size="sm"
             label-for="region"
           >
@@ -195,7 +195,7 @@
             label-size="sm"
             label-for="nguoi-phu-thuoc"
           >
-            <b-input-group size="sm" append="VNĐ">
+            <b-input-group size="sm" append="người">
               <b-form-input
                 id="nguoi-phu-thuoc"
                 v-model.number="dependentPerson"
@@ -275,7 +275,7 @@
         </b-tr>
       </b-tbody>
     </b-table-simple>
-    <h4 class="mt-5">Diễn giải chi trả của Doanh nghiệp</h4>
+    <h4 class="mt-5">Doanh nghiệp chi trả</h4>
     <b-table-simple small responsive bordered hover class="company-paid-table">
       <b-tbody>
         <b-tr>
