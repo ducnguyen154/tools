@@ -1,13 +1,25 @@
 <template>
   <div class="container">
     <!--cmty-->
-    <the-vietnamese-salary-template></the-vietnamese-salary-template>
+    <pc-the-vietnamese-salary-template
+      v-if="isPc"
+    ></pc-the-vietnamese-salary-template>
+    <sp-the-vietnamese-salary-template
+      v-else
+    ></sp-the-vietnamese-salary-template>
   </div>
 </template>
 
 <script>
-import TheVietnameseSalaryTemplate from '@/components/templates/TheVietnameseSalaryTemplate'
+import PcTheVietnameseSalaryTemplate from '@/components/templates/TheVietnameseSalaryTemplate/PcTheVietnameseSalaryTemplate'
+import SpTheVietnameseSalaryTemplate from '@/components/templates/TheVietnameseSalaryTemplate/SpTheVietnameseSalaryTemplate'
+import { mapGetters } from 'vuex'
 export default {
-  components: { TheVietnameseSalaryTemplate }
+  components: { PcTheVietnameseSalaryTemplate, SpTheVietnameseSalaryTemplate },
+  computed: {
+    ...mapGetters({
+      isPc: 'user/isPc'
+    })
+  }
 }
 </script>
