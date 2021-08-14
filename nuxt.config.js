@@ -95,7 +95,7 @@ module.exports = {
   },
 
   router: {
-    middleware: ['device'],
+    middleware: ['device', 'redirect'],
     extendRoutes(routes, resolve) {
       routes.push({
         name: 'error',
