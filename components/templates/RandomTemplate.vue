@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <b-container>
     <b-tabs class="mt-3" content-class="mt-3">
       <b-tab title="Random string">
         <random-string></random-string>
       </b-tab>
     </b-tabs>
-  </div>
+  </b-container>
 </template>
 
 <script>

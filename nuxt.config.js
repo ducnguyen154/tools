@@ -3,7 +3,7 @@ module.exports = {
   telemetry: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'tools.ducng',
+    title: 'DucNgInfo',
     meta: [
       { charset: 'utf-8' },
       {
@@ -32,7 +32,20 @@ module.exports = {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    [
+      'k-domains',
+      {
+        subDomains: ['tinhluong', 'random'],
+        rootDomain: ''
+      }
+    ],
+    [
+      '@nuxtjs/router',
+      {
+        keepDefaultRouter: true
+      }
+    ]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

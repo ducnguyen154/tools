@@ -208,7 +208,9 @@
           </b-form-group>
         </b-col>
       </b-row>
-      <b-button variant="warning" @click="doConvert">Chuyển đổi</b-button>
+      <div class="btn-box">
+        <b-button variant="warning" @click="doConvert">Chuyển đổi</b-button>
+      </div>
     </b-form>
     <h4 class="mt-5">Kết quả chi tiết</h4>
     <b-table-simple small responsive bordered hover class="nettable">
@@ -450,5 +452,15 @@ export default {
 }
 ::v-deep #region-description {
   font-size: 10pt;
+}
+
+.btn-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    font-weight: 500;
+  }
 }
 </style>

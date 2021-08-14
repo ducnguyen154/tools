@@ -1,15 +1,16 @@
 <template>
   <div>
-    <nav-bar></nav-bar>
     <Nuxt />
+    <the-footer></the-footer>
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/atoms/NavBar'
+import TheFooter from '@/components/atoms/TheFooter'
+
 export default {
   components: {
-    NavBar
+    TheFooter
   }
 }
 </script>

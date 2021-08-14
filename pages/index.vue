@@ -1,15 +1,15 @@
 <template>
-  <div class="container">
+  <div>
     <!--cmty-->
-    <random-template></random-template>
+    <the-home-nav-bar />
+    <the-tools-template />
   </div>
 </template>
 
 <script>
-import RandomTemplate from '@/components/templates/RandomTemplate'
+import TheHomeNavBar from '@/components/atoms/TheHomeNavBar'
+import TheToolsTemplate from '@/components/templates/TheToolsTemplate'
 export default {
-  components: {
-    RandomTemplate
-  }
+  components: { TheHomeNavBar, TheToolsTemplate }
 }
 </script>
