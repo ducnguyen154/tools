@@ -432,6 +432,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+table {
+  td {
+    font-size: 11pt;
+  }
+
+  th {
+    font-size: 11pt;
+  }
+}
 .nettable {
   td {
     text-align: right;

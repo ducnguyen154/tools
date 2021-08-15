@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <b-container fluid>
     <pc-the-vietnamese-salary
       class="salary-template"
     ></pc-the-vietnamese-salary>
-  </div>
+  </b-container>
 </template>
 
 <script>

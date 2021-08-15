@@ -1,5 +1,5 @@
 <template>
-  <b-container class="mt-5">
+  <b-container class="mt-5 mb-5">
     <b-card-group columns>
       <b-card title="Random" border-variant="info" align="center">
         <b-card-text

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <b-container fluid>
     <sp-the-vietnamese-salary></sp-the-vietnamese-salary>
-  </div>
+  </b-container>
 </template>
 
 <script>

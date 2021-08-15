@@ -181,7 +181,14 @@
           </b-form-group>
         </b-col>
       </b-row>
-      <b-button variant="warning" @click="doConvert">Chuyển đổi</b-button>
+      <b-button
+        variant="warning"
+        size="lg"
+        block
+        class="mt-4 mb-5"
+        @click="doConvert"
+        >Chuyển đổi</b-button
+      >
     </b-form>
     <h4 class="mt-5">Kết quả chi tiết</h4>
     <b-table-simple small responsive bordered hover class="nettable">
@@ -403,6 +410,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+table {
+  td {
+    font-size: 11pt;
+  }
+
+  th {
+    font-size: 11pt;
+  }
+}
 .nettable {
   td {
     text-align: right;
