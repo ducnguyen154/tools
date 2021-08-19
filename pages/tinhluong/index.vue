@@ -23,7 +23,7 @@ export default {
     TheNavBar
   },
   head: {
-    title: 'Tính lương GROSS - NET',
+    title: this.metaTitle,
     meta: [
       { charset: 'utf-8' },
       {
@@ -32,17 +32,30 @@ export default {
           'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0'
       },
       {
+        name: 'title',
+        content: this.metaTitle
+      },
+      {
         hide: 'description',
         name: 'description',
-        content:
-          'Trang hỗ trợ chuyển đổi lương GROSS - NET trên hệ thống tín thuế và bảo hiểm ở VN. Cập nhật 08/2021'
-      }
+        content: this.metaDescription
+      },
+      { name: 'twitter:title', content: this.metaTitle },
+      { name: 'twitter:description', content: this.metaDescription },
+      { name: 'facebook:title', content: this.metaTitle },
+      { name: 'facebook:description', content: this.metaDescription }
     ]
   },
   computed: {
     ...mapGetters({
       isPc: 'user/isPc'
-    })
+    }),
+    metaTitle() {
+      return 'Tính lương GROSS - NET'
+    },
+    metaDescription() {
+      return 'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+    }
   }
 }
 </script>
