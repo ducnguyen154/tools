@@ -23,7 +23,7 @@ export default {
     TheNavBar
   },
   head: {
-    title: this.metaTitle,
+    title: 'Tính lương GROSS - NET',
     meta: [
       { charset: 'utf-8' },
       {
@@ -33,12 +33,13 @@ export default {
       },
       {
         name: 'title',
-        content: this.metaTitle
+        content: 'Tính lương GROSS - NET'
       },
       {
         hid: 'description',
         name: 'description',
-        content: this.metaDescription
+        content:
+          'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
       },
       {
         hid: 'keywords',
@@ -46,22 +47,24 @@ export default {
         content:
           'lương GROSS, lương NET, tính lương, bảo hiểm, tính lương gross - net, thuế TNCN, thuế thu nhập cá nhân, doanh nghiệp, tra cứu lương'
       },
-      { name: 'twitter:title', content: this.metaTitle },
-      { name: 'twitter:description', content: this.metaDescription },
-      { name: 'facebook:title', content: this.metaTitle },
-      { name: 'facebook:description', content: this.metaDescription }
+      { name: 'twitter:title', content: 'Tính lương GROSS - NET' },
+      {
+        name: 'twitter:description',
+        content:
+          'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+      },
+      { name: 'facebook:title', content: 'Tính lương GROSS - NET' },
+      {
+        name: 'facebook:description',
+        content:
+          'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+      }
     ]
   },
   computed: {
     ...mapGetters({
       isPc: 'user/isPc'
-    }),
-    metaTitle() {
-      return 'Tính lương GROSS - NET'
-    },
-    metaDescription() {
-      return 'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
-    }
+    })
   }
 }
 </script>
