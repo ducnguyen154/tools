@@ -36,9 +36,15 @@ export default {
         content: this.metaTitle
       },
       {
-        hide: 'description',
+        hid: 'description',
         name: 'description',
         content: this.metaDescription
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'lương GROSS, lương NET, tính lương, bảo hiểm, tính lương gross - net, thuế TNCN, thuế thu nhập cá nhân, doanh nghiệp, tra cứu lương'
       },
       { name: 'twitter:title', content: this.metaTitle },
       { name: 'twitter:description', content: this.metaDescription },
