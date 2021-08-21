@@ -3,9 +3,9 @@
     class="fb-comments"
     :data-href="href"
     :data-numposts="numPosts"
-    :data-width="width"
     :data-lazy="lazy"
     :data-order-by="orderBy"
+    :data-width="width"
     :data-mobile="mobile"
   ></div>
 </template>

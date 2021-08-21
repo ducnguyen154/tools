@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+::v-deep .fb_iframe_widget_lift {
+  width: 100% !important;
+}
 .salary-box {
   display: flex;
   flex-flow: column;
