@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div id="fb-root"></div>
     <Nuxt />
     <the-footer></the-footer>
   </div>

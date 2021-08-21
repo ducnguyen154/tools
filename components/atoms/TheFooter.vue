@@ -1,5 +1,8 @@
 <template>
-  <footer>Copyright &copy; 2021 ducng.info. All rights reserved.</footer>
+  <footer>
+    Copyright &copy; {{ $moment().format('YYYY') }} ducng.info. All Rights
+    Reserved.
+  </footer>
 </template>
 
 <style scoped>

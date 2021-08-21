@@ -1,8 +1,18 @@
 <template>
-  <b-container fluid>
-    <pc-the-vietnamese-salary
-      class="salary-template"
-    ></pc-the-vietnamese-salary>
+  <b-container>
+    <div class="template-box">
+      <pc-the-vietnamese-salary
+        class="salary-template"
+      ></pc-the-vietnamese-salary>
+      <div
+        class="fb-comments"
+        data-href="https://tinhluong.ducng.info"
+        data-numposts="5"
+        data-width="700"
+        data-lazy
+        data-order-by="reverse_time"
+      ></div>
+    </div>
   </b-container>
 </template>
 
@@ -14,8 +24,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.salary-template {
-  max-width: 700px;
-  margin: 0 auto;
+.template-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .fb-comments {
+    margin-top: 50px;
+  }
+
+  .salary-template {
+    max-width: 700px;
+  }
 }
 </style>

@@ -1,8 +1,11 @@
-// eslint-disable-next-line nuxt/no-cjs-in-config
+/* eslint-disable nuxt/no-cjs-in-config */
 module.exports = {
   telemetry: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    htmlAttrs: {
+      lang: 'vi'
+    },
     title: 'DucNgInfo',
     meta: [
       { charset: 'utf-8' },
@@ -13,7 +16,16 @@ module.exports = {
       },
       { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        src: 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=2202461329875962&autoLogAppEvents=1',
+        crossorigin: 'anomymous',
+        async: true,
+        defer: true,
+        nonce: 'D2GnsCnn'
+      }
+    ]
   },
 
   loading: {
@@ -45,7 +57,8 @@ module.exports = {
       {
         keepDefaultRouter: true
       }
-    ]
+    ],
+    '@nuxtjs/moment'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -67,6 +80,10 @@ module.exports = {
   },
   styleResources: {
     scss: ['./assets/scss/main.scss']
+  },
+  moment: {
+    defaultLocale: ['vi'],
+    locales: ['vi']
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -92,7 +109,7 @@ module.exports = {
         ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
       ]
     }
-    // plugins: [new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /vi/)],
+    // plugins: [new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /vi/)]
   },
 
   server: {

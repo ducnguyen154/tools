@@ -1,7 +1,22 @@
 <template>
   <div class="mt-3">
     <b-form>
-      <h4>Chuyển đổi</h4>
+      <b-row>
+        <b-col sm="8">
+          <h4>Chuyển đổi</h4>
+        </b-col>
+        <b-col class="text-right">
+          <div
+            class="fb-like"
+            data-href="https://tinhluong.ducng.info"
+            data-width=""
+            data-layout="button_count"
+            data-action="like"
+            data-size="large"
+            data-share="true"
+          ></div>
+        </b-col>
+      </b-row>
       <b-form-group label-size="sm">
         <b-form-radio-group
           v-model="convertType"

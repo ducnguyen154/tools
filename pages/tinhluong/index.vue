@@ -22,49 +22,54 @@ export default {
     SpTheVietnameseSalaryTemplate,
     TheNavBar
   },
-  head: {
-    title: 'Tính lương GROSS - NET',
-    meta: [
-      { charset: 'utf-8' },
-      {
-        name: 'viewport',
-        content:
-          'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0'
-      },
-      {
-        name: 'title',
-        content: 'Tính lương GROSS - NET'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
-      },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content:
-          'lương GROSS, lương NET, tính lương, bảo hiểm, tính lương gross - net, thuế TNCN, thuế thu nhập cá nhân, doanh nghiệp, tra cứu lương'
-      },
-      { name: 'twitter:title', content: 'Tính lương GROSS - NET' },
-      {
-        name: 'twitter:description',
-        content:
-          'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
-      },
-      { name: 'facebook:title', content: 'Tính lương GROSS - NET' },
-      {
-        name: 'facebook:description',
-        content:
-          'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
-      }
-    ]
+  head() {
+    return {
+      title: `${this.metaTitle}`,
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content:
+            'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0'
+        },
+        {
+          name: 'title',
+          content: 'Tính lương GROSS - NET'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'lương GROSS, lương NET, tính lương, bảo hiểm, tính lương gross - net, thuế TNCN, thuế thu nhập cá nhân, doanh nghiệp, tra cứu lương'
+        },
+        { name: 'twitter:title', content: 'Tính lương GROSS - NET' },
+        {
+          name: 'twitter:description',
+          content:
+            'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+        },
+        { name: 'facebook:title', content: 'Tính lương GROSS - NET' },
+        {
+          name: 'facebook:description',
+          content:
+            'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+        }
+      ]
+    }
   },
   computed: {
     ...mapGetters({
       isPc: 'user/isPc'
-    })
+    }),
+    metaTitle() {
+      return 'Tính lương GROSS - NET, Chuyển đổi lương GROSS - NET, Bảo hiểm, Thuế TNCN'
+    }
   }
 }
 </script>
