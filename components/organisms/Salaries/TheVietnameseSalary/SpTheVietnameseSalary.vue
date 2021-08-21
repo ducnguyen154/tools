@@ -1,6 +1,18 @@
 <template>
   <div class="mt-3">
     <b-form>
+      <b-row>
+        <b-col class="text-right">
+          <the-fb-like-button
+            action="like"
+            href="https://tinhluong.ducng.info"
+            layout="button_count"
+            :lazy="true"
+            :share="true"
+            size="large"
+          ></the-fb-like-button>
+        </b-col>
+      </b-row>
       <h4>Chuyển đổi</h4>
       <b-form-group>
         <b-form-radio-group
@@ -402,9 +414,11 @@
 </template>
 
 <script>
+import TheFbLikeButton from '@/components/molecules/TheFbLikeButton'
 import TheVietnameseSalaryMixin from '@/components/organisms/Salaries/TheVietnameseSalary/TheVietnameseSalaryMixin'
 
 export default {
+  components: { TheFbLikeButton },
   mixins: [TheVietnameseSalaryMixin]
 }
 </script>

@@ -6,15 +6,14 @@
           <h4>Chuyển đổi</h4>
         </b-col>
         <b-col class="text-right">
-          <div
-            class="fb-like"
-            data-href="https://tinhluong.ducng.info"
-            data-width=""
-            data-layout="button_count"
-            data-action="like"
-            data-size="large"
-            data-share="true"
-          ></div>
+          <the-fb-like-button
+            action="like"
+            href="https://tinhluong.ducng.info"
+            layout="button_count"
+            :lazy="true"
+            :share="true"
+            size="large"
+          ></the-fb-like-button>
         </b-col>
       </b-row>
       <b-form-group label-size="sm">
@@ -439,9 +438,11 @@
 </template>
 
 <script>
+import TheFbLikeButton from '@/components/molecules/TheFbLikeButton'
 import TheVietnameseSalaryMixin from '@/components/organisms/Salaries/TheVietnameseSalary/TheVietnameseSalaryMixin'
 
 export default {
+  components: { TheFbLikeButton },
   mixins: [TheVietnameseSalaryMixin]
 }
 </script>

@@ -4,22 +4,23 @@
       <pc-the-vietnamese-salary
         class="salary-template"
       ></pc-the-vietnamese-salary>
-      <div
-        class="fb-comments"
-        data-href="https://tinhluong.ducng.info"
-        data-numposts="5"
-        data-width="700"
-        data-lazy
-        data-order-by="reverse_time"
-      ></div>
+      <the-fb-comment-area
+        href="https://tinhluong.ducng.info"
+        order-by="reverse_time"
+        :num-posts="5"
+        :width="700"
+        :lazy="true"
+        :mobile="false"
+      ></the-fb-comment-area>
     </div>
   </b-container>
 </template>
 
 <script>
+import TheFbCommentArea from '@/components/molecules/TheFbCommentArea'
 import PcTheVietnameseSalary from '@/components/organisms/Salaries/TheVietnameseSalary/PcTheVietnameseSalary'
 export default {
-  components: { PcTheVietnameseSalary }
+  components: { PcTheVietnameseSalary, TheFbCommentArea }
 }
 </script>
 
