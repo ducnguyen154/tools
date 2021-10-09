@@ -202,16 +202,22 @@ export default {
     },
     convertNet2Gross() {
       this.netSalary = this.salary
-      // tinh thu nhap chiu thue
-      const reverseSalary =
-        this.netSalary - (this.dependantDeduction + this.reduceYourself)
+      this.incomeBeforeTax = this.netSalary + 0
+      // Truong hop co dong thue thu nhap ca nhan
+      if (this.netSalary > this.personalIncomeTax) {
+        // tinh thu nhap chiu thue
+        const reverseSalary = Math.max(
+          this.netSalary,
+          this.netSalary - (this.dependantDeduction + this.reduceYourself)
+        )
 
-      this.taxableIncome = this.conversionTax(reverseSalary)
-      this.pitCalculation()
+        this.taxableIncome = this.conversionTax(reverseSalary)
+        this.pitCalculation()
 
-      // tinh thu nhap truoc thue
-      this.incomeBeforeTax =
-        this.taxableIncome + this.dependantDeduction + this.reduceYourself
+        // tinh thu nhap truoc thue
+        this.incomeBeforeTax =
+          this.taxableIncome + this.dependantDeduction + this.reduceYourself
+      }
 
       if (!this.insuranceFromSalary) {
         const insuranceOnBaseSalary = this.getInsuranceSalary('baseSalary')
@@ -276,10 +282,12 @@ export default {
       }, 0)
     },
     conversionTax(netSalary) {
+      console.log(typeof netSalary, netSalary)
       const conversionTaxTable = personalIncomeTax.conversionTax.find(
         (item) =>
           netSalary >= item.min && (item.max === -1 || netSalary <= item.max)
       )
+      console.log(conversionTaxTable)
 
       return (
         (netSalary - conversionTaxTable?.excluded) / conversionTaxTable?.percent
