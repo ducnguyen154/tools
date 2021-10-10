@@ -75,9 +75,9 @@ module.exports = {
     id: 'UA-71971053-2',
     dev: false
   },
-  bootstrapVue: {
-    icons: true
-  },
+  // bootstrapVue: {
+  //   icons: true
+  // },
   styleResources: {
     scss: ['./assets/scss/main.scss']
   },

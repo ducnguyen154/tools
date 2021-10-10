@@ -282,12 +282,10 @@ export default {
       }, 0)
     },
     conversionTax(netSalary) {
-      console.log(typeof netSalary, netSalary)
       const conversionTaxTable = personalIncomeTax.conversionTax.find(
         (item) =>
           netSalary >= item.min && (item.max === -1 || netSalary <= item.max)
       )
-      console.log(conversionTaxTable)
 
       return (
         (netSalary - conversionTaxTable?.excluded) / conversionTaxTable?.percent
