@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div id="fb-root"></div>
     <!--cmty-->
     <the-nav-bar page="tinhluong" variant="danger" />
     <pc-the-vietnamese-salary-template
@@ -59,6 +60,15 @@ export default {
           name: 'facebook:description',
           content:
             'Hỗ trợ tính lương GROSS - NET, cung cấp công cụ chuyển đổi lương GROSS - NET nhanh chóng, chính xác, cập nhật chính xác theo luật hiện hành. Tính các khoản bảo hiểm, thuế thu nhập các nhân... chí phí mà doanh nghiệp phải bỏ ra khi trả lương cho một nhân viên...'
+        }
+      ],
+      script: [
+        {
+          url: 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=2202461329875962&autoLogAppEvents=1',
+          async: true,
+          defer: true,
+          crossorigin: 'anonymous',
+          nonce: '79Af5EZT'
         }
       ]
     }

@@ -16,16 +16,7 @@ module.exports = {
       },
       { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [
-      {
-        src: 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=2202461329875962',
-        crossorigin: 'anomymous',
-        async: true,
-        defer: true,
-        nonce: 'D2GnsCnn'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   loading: {
