@@ -164,6 +164,7 @@ export default {
     },
     convertGross2Net() {
       this.grossSalary = this.tongThuNhap
+      this.pit = 0
       // tinh bao hiem
       const insuranceOnBaseSalary = this.getInsuranceSalary('baseSalary')
       this.calculateSocialInsurance(insuranceOnBaseSalary)
@@ -203,13 +204,13 @@ export default {
     convertNet2Gross() {
       this.netSalary = this.salary
       this.incomeBeforeTax = this.netSalary + 0
+      this.taxableIncome = 0
+      this.pit = 0
       // Truong hop co dong thue thu nhap ca nhan
-      if (this.netSalary > this.personalIncomeTax) {
+      const reduce = this.dependantDeduction + this.reduceYourself
+      if (this.netSalary > reduce) {
         // tinh thu nhap chiu thue
-        const reverseSalary = Math.max(
-          this.netSalary,
-          this.netSalary - (this.dependantDeduction + this.reduceYourself)
-        )
+        const reverseSalary = this.netSalary - reduce
 
         this.taxableIncome = this.conversionTax(reverseSalary)
         this.pitCalculation()
