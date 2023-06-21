@@ -43,7 +43,7 @@
     "k-domains": "^1.2.5",
     "module-alias": "^2.2.2",
     "nocache": "^3.0.1",
-    "nuxt": "^2.15.3",
+    "nuxt": "^3.4.3",
     "sass": "^1.35.2",
     "sass-loader": "^10",
     "vue-template-compiler": "^2.6.14"
