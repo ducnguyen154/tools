@@ -310,14 +310,14 @@
       </b-tbody>
     </b-table-simple>
     <b-modal
-      id="region-description"
+      ref="region-description"
       title="Quy định lương tối thiểu vùng"
       centered
       scrollable
       hide-footer
     >
       <p>
-        (Tham khảo:
+        SP (Tham khảo:
         <a
           href="https://thuvienphapluat.vn/van-ban/Lao-dong-Tien-luong/Nghi-dinh-90-2019-ND-CP-muc-luong-toi-thieu-vung-418807.aspx"
           >Nghị định 90/2019/NĐ-CP</a
@@ -325,10 +325,12 @@
       </p>
       <h5>Lương tối thiểu vùng:</h5>
       <ul>
-        <li>Vùng I: 4.420.000 đồng/tháng</li>
-        <li>Vùng II: 3.920.000 đồng/tháng</li>
-        <li>Vùng III: 3.430.000 đồng/tháng</li>
-        <li>Vùng IV: 3.070.000 đồng/tháng</li>
+        <li>Vùng I: {{ minimumWageByRegion.I | numberFormat }} đồng/tháng</li>
+        <li>Vùng II: {{ minimumWageByRegion.II | numberFormat }} đồng/tháng</li>
+        <li>
+          Vùng III: {{ minimumWageByRegion.III | nuberFormat }} đồng/tháng
+        </li>
+        <li>Vùng IV: {{ minimumWageByRegion.IV | numberFormat }} đồng/tháng</li>
       </ul>
       <h5 class="sm">Danh sách vùng:</h5>
       <p>

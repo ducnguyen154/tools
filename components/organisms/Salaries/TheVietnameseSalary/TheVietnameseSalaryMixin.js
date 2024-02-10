@@ -20,13 +20,13 @@ export default {
       dependentPerson: 0,
       dependentPersonUnit: 4400000,
       region: 'I',
-      insuranceFromSalary: true,
-      baseSalary: 1490000,
+      insuranceFromSalary: true, // tính bảo hiểu từ lương
+      baseSalary: 1800000, // lương cơ sở https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/thoi-su-phap-luat/chinh-sach-moi/43122/luong-co-so-2023-la-bao-nhieu-khi-nao-tang-luong-co-so-2023
       minimumWageByRegion: {
-        I: 4420000,
-        II: 3920000,
-        III: 3430000,
-        IV: 3070000
+        I: 4680000,
+        II: 4160000,
+        III: 3640000,
+        IV: 3250000
       },
       convertTypes: [
         {
@@ -118,7 +118,7 @@ export default {
   },
   methods: {
     minimumWageByRegionDescription() {
-      this.$bvModal.show('region-description')
+      this.$refs['region-description'].show()
     },
     calculateSocialInsurance(insuranceSalary) {
       this.socialInsurance =
