@@ -36,19 +36,19 @@ module.exports = {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // [
-    //   'k-domains',
-    //   {
-    //     subDomains: ['tinhluong', 'random'],
-    //     rootDomain: ''
-    //   }
-    // ],
-    // [
-    //   '@nuxtjs/router',
-    //   {
-    //     keepDefaultRouter: true
-    //   }
-    // ],
+    [
+      'k-domains',
+      {
+        subDomains: ['tinhluong', 'random'],
+        rootDomain: ''
+      }
+    ],
+    [
+      '@nuxtjs/router',
+      {
+        keepDefaultRouter: true
+      }
+    ],
     '@nuxtjs/moment'
   ],
 
