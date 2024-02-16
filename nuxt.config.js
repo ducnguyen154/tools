@@ -43,12 +43,12 @@ module.exports = {
     //     rootDomain: ''
     //   }
     // ],
-    [
-      '@nuxtjs/router',
-      {
-        keepDefaultRouter: true
-      }
-    ],
+    // [
+    //   '@nuxtjs/router',
+    //   {
+    //     keepDefaultRouter: true
+    //   }
+    // ],
     '@nuxtjs/moment'
   ],
 
